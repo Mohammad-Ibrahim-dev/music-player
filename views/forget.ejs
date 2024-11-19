@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music-forget</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="box">
+        <form id="otpForm" action="/otp" method="POST" class="innerbox">
+            <h2>Forget-Password</h2>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="enter valid email" id="email" required>
+            <button type="submit" class="btn">Send OTP</button>
+        </form>
+
+        <form id="verifyForm" action="/otp/verify" method="POST" class="innerbox" style="display:none;">
+            <h2>OTP Verification</h2>
+            <label for="otp">Enter OTP</label>
+            <input type="text" class="form-control" id="otp" name="otp" required>
+            <label for="password">New Password</label>
+            <input type="password" name="password" id="password">
+            <input type="hidden" name="email" id="hiddenEmail">
+            <button type="submit" class="btn">Verify OTP</button>
+        </form>
+    </div>
+
+    <script>
+        const otpForm = document.getElementById('otpForm');
+        const verifyForm = document.getElementById('verifyForm');
+        const hiddenEmail = document.getElementById('hiddenEmail');
+
+        otpForm.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            hiddenEmail.value = email;
+            verifyForm.style.display = '';
+            otpForm.style.display = 'none';
+        })
+    </script>
+
+</body>
+
+</html>

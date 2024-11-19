@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music-SignUp</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="box">
+        <form action="/signup" method="post" class="innerbox">
+              <span style="top: 0px;"> Music</span>
+              <label for="emaillabel">Email ID</label>
+              <input type="email" placeholder="Enter email" required name="email">
+              <label for="Username">Username</label>
+              <input type="text" placeholder="Username" required name="username">
+              <label for="phonelabel">PHONE NO.</label>
+              <input type="tel" placeholder="Enter phone number" required name="phone">
+              <label for="password">PASSWORD</label>
+              <input type="password" placeholder="password" required name="password" >
+              <h3><%=error%></h3>
+              <button type="submit" class="btn">SIGN UP</button>
+        </form>
+    </div>
+</body>
+</html>

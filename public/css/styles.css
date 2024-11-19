@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:white;
+}
+body{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height: 100%;
+}
+/* LOG IN CSS */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.innerbox {
+    margin: 20px;
+    padding: 50px;
+    height: 60%;
+    background-color:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    gap: 10px;
+}
+
+.innerbox span{
+    margin-top: 15px;
+    font-size: 35px;
+    font-style: oblique;
+    font-weight: 900;
+    position: relative;
+    bottom: 15%;
+    border-bottom: 1px solid;
+}
+
+label {
+    align-self: start;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+input {
+    width: 300px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: large;
+    background: transparent;
+}
+
+.btn {
+    margin: 15px;
+    margin-top: 25px;
+    width: 120px;
+    height: 35px;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    background-color:transparent;
+    border-radius:5px ;
+}
+.btn:hover{
+    background-color: skyblue;
+    color: black;
+}
+h3{
+    color: red;
+}
